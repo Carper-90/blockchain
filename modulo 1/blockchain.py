@@ -24,18 +24,18 @@ class Blockchain:
         self.chain = []
         self.create_block(proof = 1, previous_hash = '0')
         
-    def create_block(self, proof, previous_hash):
-        block = {'index' : len(self.chain)+1,
-                 'timestamp' : str(datetime.datetime.now()),
-                 'proof' : proof,
-                 'previous_hash': previous_hash}
-        self.chain.append(block)
-        return block
+    def create_block(self, proof, previous_hash):#Crear un nuevo bloque de la cadena
+        block = {'index' : len(self.chain)+1, #Crear un nuevo bloque de la cadena
+                 'timestamp' : str(datetime.datetime.now()), #Crear un nuevo bloque de la cadena
+                 'proof' : proof, #Crear un nuevo bloque de la cadena
+                 'previous_hash': previous_hash} #Crear un nuevo bloque de la cadena
+        self.chain.append(block) #Crear un nuevo bloque de la cadena 
+        return block #Crear un nuevo bloque de la cadena
 
-    def get_previous_block(self):
-        return self.chain[-1]
+    def get_previous_block(self): #Obtener el último bloque de la cadena
+        return self.chain[-1] #Obtener el último bloque de la cadena
     
-    def proof_of_work(self, previous_proof):
+    def proof_of_work(self, previous_proof): 
         new_proof = 1
         check_proof = False
         while check_proof is False:
