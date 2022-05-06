@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Aug 25 16:07:09 2021
-@author: juangabriel
+@author: Carlos Augusto Persico (Carper-90)
 """
 
 # Módulo 1 - Crear una Cadena de Bloques
@@ -84,7 +84,7 @@ def mine_block():
     proof = blockchain.proof_of_work(previous_proof)
     previous_hash = blockchain.hash(previous_block)
     block = blockchain.create_block(proof, previous_hash)
-    response = {'message' : '¡Enhorabuena, has minado un nuevo bloque!', 
+    response = {'message' : '¡Felicidades, has minado un nuevo bloque!', 
                 'index': block['index'],
                 'timestamp' : block['timestamp'],
                 'proof' : block['proof'],
